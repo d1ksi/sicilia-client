@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+.main-page-wraper {
+   max-width: 100vw;
+   height: 100%;
+   background: -webkit-linear-gradient(45deg, rgb(240, 255, 255), rgb(255, 250, 250));
+   background: -moz-linear-gradient(45deg, rgb(240, 255, 255), rgb(255, 250, 250));
+   background: linear-gradient(45deg, rgb(240, 255, 255), rgb(255, 250, 250));
+   overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body::-webkit-scrollbar {
+   width: 4px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+body::-webkit-scrollbar-thumb {
+   background-color: #FFF8DC;
+   border: 2px solid #FFF8DC;
+   border-radius: 30px;
+   -webkit-border-radius: 30px;
+   -moz-border-radius: 30px;
+   -ms-border-radius: 30px;
+   -o-border-radius: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.flag {
+   width: 150px;
+   height: 4px;
+   background: linear-gradient(to right, green 33%, white 33%, white 66%, red 66%);
 }
 
-.App-link {
-  color: #61dafb;
+.menu-text:hover {
+   color: #d49139;
+   position: relative;
+   display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu-text:hover::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: -5px;
+   width: 100%;
+   height: 3px;
+   background-image: linear-gradient(to right, green 33%, white 33%, white 66%, red 66%);
+}
+
+
+.italia {
+   position: relative;
+   max-width: 100vw;
+   height: 600px;
+   background-image: url('https://img3.akspic.ru/crops/8/1/3/0/90318/90318-tsvetok-grand_kanal-italiya-rastenie-ulica-1920x1080.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.italia::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   z-index: 1;
+}
+
+.about {
+   position: relative;
+}
+
+.about::after {
+   content: "";
+   display: block;
+   width: 163px;
+   height: 2px;
+   background-color: #fcac43;
+   position: absolute;
+   bottom: -10px;
+   left: 0;
+}
+
+.button-about:hover {
+   background: linear-gradient(to right, green 33%, white 33%, white 66%, red 66%);
+}
+
+
+.map h2 {
+   position: relative;
+}
+
+.map h2::after {
+   content: "";
+   display: block;
+   width: 285px;
+   height: 2px;
+   background-color: #fcac43;
+   position: absolute;
+   bottom: -10px;
+   left: 0;
+}
+
+.googlemap {
+   border: 0;
+   width: 60%;
+   height: 550px;
+}
+
+#footer {
+   background-image: linear-gradient(to right, #c2d9c2 33%, #f0f0f0 33%, #f0f0f0 66%, #f7a4a4 66%);
+}
+
+.category-text {
+   background: linear-gradient(to right, green 33%, white 33%, white 66%, red 66%);
 }
